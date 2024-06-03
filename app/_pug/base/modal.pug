@@ -1,0 +1,24 @@
+.modal#modal_recall
+    .modal-flex
+        .modal-window
+            .modal-close
+                span.close
+            .modal-header
+                h1 Письмо
+
+            .modal-body 
+                .recall_form
+                    .recall_form-textarea
+                        textarea(placeholder="Текст письма")
+                    .recall_form-input
+                        input(type="text", placeholder="Ваше имя")
+                    .recall_form-input
+                        input(type="text", placeholder="Ваш e-mail")
+
+                    .recall_form-agree
+                        +checkbox("Согласен на обработку персональных данных")
+
+                    .recall_form-footer
+                        .recall_form-recaptcha
+                        .recall_form-button
+                            button.button.button-primary Отправить

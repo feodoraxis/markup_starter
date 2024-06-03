@@ -1,0 +1,224 @@
+$carousel-indicator-width: 28px
+// $utilities-border-colors: #CCC
+
+/**
+ * All libs
+ */
+@import 'node_modules/bootstrap/scss/functions.scss'
+@import 'node_modules/bootstrap/scss/variables.scss'
+@import 'node_modules/bootstrap/scss/maps.scss'
+@import 'node_modules/bootstrap/scss/mixins.scss'
+@import 'node_modules/bootstrap/scss/utilities.scss'
+@import 'node_modules/bootstrap/scss/reboot.scss'
+@import 'node_modules/bootstrap/scss/containers.scss'
+@import 'node_modules/bootstrap/scss/grid.scss'
+
+// @import 'node_modules/@selectize/selectize/dist/scss/selectize.scss'
+// @import 'node_modules/tiny-slider/src/tiny-slider.scss'
+// @import 'node_modules/vanillajs-datepicker/sass/datepicker.scss'
+// @import 'node_modules/vanillajs-datepicker/sass/datepicker-bulma.scss'
+// @import '../_libs/photoswipe/photoswipe.scss'
+
+// @import 'node_modules/photoswipe/dist/photoswipe.scss'
+// @import 'node_modules/tiny-slider/src/tiny-slider.scss' 
+// @import "../../libs/jquery-ui/jquery-ui.min.css"
+// @import "../../libs/photoswipe/dist/photoswipe.css"
+
+/**
+ * All libs (end)
+ */
+
+
+
+//Vars
+// Fonts
+$def_font: "EuclidSquare", sans-serif
+
+// Colors
+$def: #000
+
+$browser-context: 15 // Default
+
+// width
+$maxW1: 1400px
+
+// Media queries breakpoints for mixins
+// Small ≥576px
+$sm: 576px
+$sm_maxw: 540px
+
+// Medium ≥768px
+$md: 768px
+$md_maxw: 720px
+
+// Large ≥992px
+$lg: 992px
+$lg_maxw: 960px
+
+$w1024: 1024px
+
+// Extra Large ≥1200px
+$xl: 1200px
+$xl_maxw: 1140px
+
+$w1280: 1280px
+
+// Extra Large ≥1440px
+$xxl: 1440px
+$xxl_maxw: 1380px
+
+// Extra Large ≥1440px
+$xxxl: 1600px
+
+
+// Vertical breakpoints
+$h800: 800px
+
+
+//Mixins
+// Font face
+=font_face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+    @font-face
+        font-family: $font-family
+        font-weight: $weight
+        font-style: $style
+        font-display: swap
+        src: url('#{$file-path}.ttf') format('truetype')
+        
+@function em($pixels, $context: $browser-context)
+    @return #{$pixels/$context}em
+
+@function rem($pixels, $context: $browser-context)
+    @return #{$pixels/$context}rem
+
+// Media queries
+// max-width
+=xxxl
+    @media only screen and (max-width: $xxxl)
+        @content
+
+=xxl
+    @media only screen and (max-width: $xxl)
+        @content
+
+=xl
+    @media only screen and (max-width: $xl)
+        @content
+
+=lg
+    @media only screen and (max-width: $lg)
+        @content
+
+=md
+    @media only screen and (max-width: $md)
+        @content
+
+=sm
+    @media only screen and (max-width: $sm)
+        @content
+
+
+// min-width
+=min_xxxl
+    @media only screen and (min-width: $xxxl)
+        @content
+
+=min_xxl
+    @media only screen and (min-width: $xxl)
+        @content
+
+=min_xl
+    @media only screen and (min-width: $xl)
+        @content
+
+=min_lg
+    @media only screen and (min-width: $lg)
+        @content
+
+=min_md
+    @media only screen and (min-width: $md)
+        @content
+
+=min_sm
+    @media only screen and (min-width: $sm)
+        @content
+
+// max-height
+=h800
+    @media only screen and (max-height: $h800)
+        @content
+
+=h_xxxl
+    @media only screen and (max-height: $xxxl)
+        @content
+
+=h_xxl
+    @media only screen and (max-height: $xxl)
+        @content
+
+=h_xl
+    @media only screen and (max-height: $xl)
+        @content
+
+=h_lg
+    @media only screen and (max-height: $lg)
+        @content
+
+=h_md
+    @media only screen and (max-height: $md)
+        @content
+
+=h_sm
+    @media only screen and (max-height: $sm)
+        @content
+
+
+// min-height
+=min_h_xxxl
+    @media only screen and (min-height: $xxxl)
+        @content
+
+=min_h_xxl
+    @media only screen and (min-height: $xxl)
+        @content
+
+=min_h_xl
+    @media only screen and (min-height: $xl)
+        @content
+
+=min_h_lg
+    @media only screen and (min-height: $lg)
+        @content
+
+=min_h_md
+    @media only screen and (min-height: $md)
+        @content
+
+=min_h_sm
+    @media only screen and (min-height: $sm)
+        @content
+
+
+//Fonts
++font_face("EuclidSquare", "../fonts/EuclidSquare-Light",           300, normal)
++font_face("EuclidSquare", "../fonts/EuclidSquare-LightItalic",     300, italic)
++font_face("EuclidSquare", "../fonts/EuclidSquare-Regular",         400, normal)
++font_face("EuclidSquare", "../fonts/EuclidSquare-Italic",          400, italic)
++font_face("EuclidSquare", "../fonts/EuclidSquare-Medium",          500, normal)
++font_face("EuclidSquare", "../fonts/EuclidSquare-MediumItalic",    500, italic)
++font_face("EuclidSquare", "../fonts/EuclidSquare-SemiBold",        600, normal)
++font_face("EuclidSquare", "../fonts/EuclidSquare-SemiBoldItalic",  600, italic)
++font_face("EuclidSquare", "../fonts/EuclidSquare-Bold",            700, normal)
++font_face("EuclidSquare", "../fonts/EuclidSquare-BoldItalic",      700, italic)
++font_face("EuclidSquare", "../fonts/EuclidSquare-ExtraBold",       800, normal)
++font_face("EuclidSquare", "../fonts/EuclidSquare-ExtraBoldItalic", 800, italic)
++font_face("EuclidSquare", "../fonts/EuclidSquare-Bold",            900, normal)
++font_face("EuclidSquare", "../fonts/EuclidSquare-BoldItalic",      900, italic)
+
+
+// Base
+@import "base.sass"
+
+// Common (Main constum styles)
+@import "blocks/base/*.sass"
+@import "blocks/*.sass"

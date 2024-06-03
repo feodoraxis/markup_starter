@@ -1,0 +1,146 @@
+:root 
+    --color-default: #1C1A1E
+    --color-second-text: #98959D 
+    --color-blue: #1E0E47
+    --color-red: #EC3029
+    --color-gray: #DADADA
+    --color-gray-dark: #ABABAB
+    --color-gray-lite: #F5F4F6
+    --color-gray-blue-lite: #F2EFF8
+    --color-gray-blue-lite-hover: #E9E6EF
+
+html
+    +sm
+        overscroll-behavior-y: contain
+
+
+html,
+body
+    font-size: #{$browser-context}px
+    overflow-x: hidden
+    
+
+body
+    font-size: #{$browser-context}px
+    min-width: 320px
+    position: relative
+    font-family: $def_font
+    // overflow-x: hidden
+    color: var(--color-default)
+    background: #fff
+    input, textarea
+        border: #666 1px solid
+        outline: none
+        &:focus:required:invalid
+            border-color: red
+        &:required:valid
+            border-color: green
+
+html
+    line-height: 1.3
+    *
+        line-height: 1.3
+        
+
+::placeholder
+    color: #666
+
+// ::selection
+//     background-color: #fff
+//     color: #000
+
+::before,
+::after
+    display: block
+    position: absolute
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+
+h1,h2,h3,h4,h5,h6
+    margin: 0
+    padding: 0
+
+ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+
+img
+    width: auto
+    max-width: 100%
+    height: auto
+
+b, strong
+    font-weight: bold
+
+button
+    outline: none
+    appearance: none
+button:focus
+    outline: none
+
+input
+    appearance: none
+
+.modal
+    opacity: 0
+    pointer-events: none
+
+.container-fluid
+    padding: 0
+
+.wrapper
+    margin: 0 auto
+    max-width: $maxW1
+    padding: .1px 50px
+    position: relative
+    width: 100%
+    &-static
+        position: static
+
+    &-small
+        max-width: 990px
+    +xl
+        padding: .1px 20px
+
+    +sm
+        padding: .1px 12px
+
+.bg
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 10
+    img
+        object-fit: cover
+        height: 100%
+        width: 100%
+
+.hidden
+    display: none !important
+
+
+.align-center
+    align-items: center
+
+.align-center__td
+    text-align: center
+    
+.selectize-input 
+    div
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 1
+        display: -webkit-box
+        margin: 0
+        overflow: hidden
+        -o-text-overflow: ellipsis
+        text-overflow: ellipsis
+        word-break: break-word
+        max-width: 90%
+
+    input[type="select-one"]
+        display: none !important
